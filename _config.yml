@@ -19,15 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Yan Li
+author: Yan Li
 email: liyan.career@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome! This is Yan Li's projects page. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://yanxxx.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  Yanxxx
 
 # Build settings
 theme: minima
@@ -53,5 +51,19 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# File structure settings
+image_path: assets/images
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
 sass:
+  sass_dir: _sass
   style: compressed

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Hexacopter Drone
-image: /assets/imgs/drone.png
+image: /assets/images/ai-forestry/display.gif
 tags: [robotics, drone, gail]
 ---
 
