@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/css/style.scss' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+  {% include nav.html %}
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>

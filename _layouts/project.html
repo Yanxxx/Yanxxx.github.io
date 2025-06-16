@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p>{{ page.content }}</p>
+<ul>
+  {% for tag in page.tags %}
+    <li>{{ tag }}</li>
+  {% endfor %}
+</ul>
