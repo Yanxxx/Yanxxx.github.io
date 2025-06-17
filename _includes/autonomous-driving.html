@@ -9,12 +9,23 @@
                             Instance segmentation for vehicle automation
                         </h3>
                     </div>
-                    <p> In this paper, we proposed a coorelationship layer for instance segmenation. In order to distinguish individuls, we evaluate the relationship between every two position in the feature map. As this is a combination problem, this process is time consuming. Since the output still a tensor, we change the explicit evaluation method as CNN layer which geneate the relation map through network. And the explicit method provide the groud truth the relationship map layer. Then connect the relationshape layer to a MLP as </p>
-                        <div class="tech-list">
-                        <span class="tech-item">Computer Vision</span>
-                        <span class="tech-item">IMU</span>
-                        <span class="tech-item">Ego motion tracking</span>
-                        <span class="tech-item">Feature scarcity scene tracking</span>
+                    <p>
+                        This project extends the previous lane detection work by improving the efficiency of lane instance association. The original approach relied on explicit computation of a pixel-level correlation matrix, which proved computationally expensive and difficult to scale.
+
+To address this, we replaced the exact correlation computation with a fully convolutional neural network (CNN) module that learns to estimate the correlation matrix directly from image features. This data-driven approach significantly reduces computational cost while retaining the ability to distinguish individual lane instances.
+
+The predicted correlation matrix is then used to perform lane instance separation, allowing the system to robustly identify and track multiple lanes in real-time, even in complex road scenarios.
+                    </p>
+                    <!-- <p>
+                        This project was a continued work based on the lane detection project. The cooralationship matrix compustation is 
+                        cumbersome, in this project, we changed the exact matrix computation to a full CNN network module to estimate the 
+                        correlation matrix. And the use the estiamted matrix output for instance distinguishment. 
+                    </p> -->
+                    <div class="tech-list">
+                        <span class="tech-item">Instance Segmentation</span>
+                        <span class="tech-item">Pixel Level Relationship Matrix</span>
+                        <span class="tech-item">Instance Distinguish Method</span>
+                        <span class="tech-item">Bottom-up Algorithm</span>
                     </div>
                 </div>
             </div>
@@ -29,12 +40,26 @@
                             Distinguish detected lane markers into sepearate lanes  
                         </h3>
                     </div>
-                    <p>This paper proposes a method to measure the motion of a moving rigid body using a hybrid visual–inertial sensor. The rotational velocity of the moving object is computed from visual optical flow by solving a depthindependent bilinear constraint, and the translational velocity of the moving object is estimated by solving a dynamics constraint that reveals the relation between scene depth and translational motion. By fusing an inertial sensor, the scale of translational velocities can be estimated, which is otherwise unrecoverable from monocular visual optical flow. An iterative refinement scheme is introduced to deal with observation noise and outliers, and the extended Kalman filter is applied for motion tracking. The performance of the proposed method is evaluated by simulation studies and practical experiments, and the results show the effectiveness of the proposed method in terms of accuracy and robustness. </p>
+                    <p>
+                        This project was motivated by the challenge of multi-lane detection in the absence of high-definition maps, particularly in complex or unstructured road environments.
+
+To address this, I proposed a pixel-level lane association framework by computing a pixel-to-pixel relational matrix that captures the structural continuity of individual lane markers. This approach enables the system to differentiate between adjacent lane boundaries and maintain consistent lane identities across frames.
+
+To improve efficiency, a lane marker filtering module was introduced to eliminate irrelevant pixels early in the pipeline, significantly reducing computational overhead while maintaining detection accuracy.
+
+This method supports lane-level localization using only onboard perception, making it especially suitable for real-time autonomous driving applications in environments where HD maps are unavailable or unreliable.
+                    </p>
+                    <!-- <p>
+                        This project motivated by solving the mutliple lane numbers lane detection problem.
+                        I proposed to calcualte the pixel level pixel-pixel relationship matrix for distinguish from lane to lane markers.
+                        The goal is to deal with on road lane level localization without high defination map available. 
+                        reduced the computation load by filtering out the non lane marker pixels. 
+                    </p> -->
                     <div class="tech-list">
-                        <span class="tech-item">Real-scale depth estimation</span>
-                        <span class="tech-item">Dense visual scene depth</span>
-                        <span class="tech-item">IMU</span>
-                        <span class="tech-item">Dense Optical flow</span>
+                        <span class="tech-item">Pixel-pixel Relationship Matrix</span>
+                        <span class="tech-item">Lane Detection</span>
+                        <span class="tech-item">Unlimited Lane Numbers</span>
+                        <span class="tech-item">Image Segmentation</span>
                     </div>
                 </div>
             </div>
@@ -48,12 +73,38 @@
                         <h3>
                              Robust Thermal-RGB vehicle detection
                         </h3>
-                        <p>This paper proposes a method to measure the motion of a moving rigid body using a hybrid visual-inertial sensor. The rotational velocity of the moving object is computed from visual optical flow by solving a depthindependent bilinear constraint, and the translational velocity of the moving object is estimated by solving a dynamics constraint that reveals the relation between scene depth and translational motion. By fusing an inertial sensor, the scale of translational velocities can be estimated, which is otherwise unrecoverable from monocular visual optical flow. An iterative refinement scheme is introduced to deal with observation noise and outliers, and the extended Kalman filter is applied for motion tracking. The performance of the proposed method is evaluated by simulation studies and practical experiments, and the results show the effectiveness of the proposed method in terms of accuracy and robustness.</p>
+                        <p>
+                            This project was motivated by the challenges of vehicle perception under severe lighting conditions—a critical safety concern in real-world driving scenarios such as driving directly into sunlight at dawn or dusk, navigating rainy nights with inconsistent street lighting, or operating in low-light environments.
+
+To address these issues, we developed a complementary detection system that fuses data from an RGB camera and a far-infrared thermal camera. These two sensing modalities are highly complementary: the RGB camera excels under good lighting, while the thermal camera provides consistent object detection in low-visibility or high-glare situations.
+
+Our approach effectively covers a wide range of conditions:
+
+Overexposed environments where visible light is too intense,
+
+Underexposed or nighttime scenes where RGB performance drops,
+
+Thermal-uniform environments, such as sheltered or foggy areas where background and vehicle temperatures converge.
+
+By jointly processing RGB and thermal data, the system significantly improves vehicle detection robustness across diverse and adverse lighting conditions, enhancing safety and reliability for autonomous and assisted driving.
+                        </p>
+                        <!-- <p>
+                            This project motivated by the vehicle driving under servere lighting condition environment.
+                            The servere lighting condition is common, such as: morning or dawn driving toward the sun, rainy night 
+                            in a vary street lamp condition, low light condition, etc. 
+                            These conditions significantly influnce the safety of driving. 
+                            We proposed a complementry detection model using the far infrared camera and RGB camera, which can complement 
+                            each other in different environment combinations which covers most of the driving scenarios: too bright of the 
+                            visiable light, too dark of the visiable light, sheltered environemnt which uniforms the environemnt temps and the 
+                            vehicle temps. 
+                            Joint the info from RGB cam and thermal camera, we can detect the vehicle in most light conditon scenarios. 
+                        </p> -->
                     </div><div class="tech-list">
-                        <span class="tech-item">Real-scale movement estimation</span>
-                        <span class="tech-item">Visual scene depth</span>
-                        <span class="tech-item">IMU</span>
-                        <span class="tech-item">Optical flow</span>
+                        <span class="tech-item">Thermal Camera</span>
+                        <span class="tech-item">Vehicle Detection</span>
+                        <span class="tech-item">Complementery Modality</span>
+                        <span class="tech-item">Deep Learning</span>
+                        <span class="tech-item">CNN</span>
                     </div>
                 </div>
             </div>
@@ -67,12 +118,30 @@
                         <h3>
                             Spatial calibration for thermal-rgb cameras and inertial sensor system 
                         </h3>
-                        <p>Visual and inertial sensors are used collaboratively in many applications because of their complementary properties. The problem associated with sensor fusion is relative coordinate transformations. This paper presents a quaternion-based method to estimate the relative rotation between visual and inertial sensors. Rotation between a camera and an inertial measurement unit (IMU) is represented by quaternions, which are separately measured to allow the sensor to be optimized individually. Relative quaternions are used so that the global reference is not required to be known. The accuracy of the coordinate transformation was evaluated by comparing with a ground-truth tracking system. The experiment analysis proves the effectiveness of the proposed method in terms of accuracy and robustness.</p>
+                        <p>
+                            This project serves as a foundational step for thermal-RGB vehicle detection, focusing on the cross-modality target association between RGB and thermal cameras. The goal is to accurately match detected objects across both sensing modalities, a critical requirement for robust sensor fusion.
+
+The central challenge lies in identifying a common calibration marker that is reliably detectable in both RGB and thermal imagery. To address this, I designed a custom LED-based calibration board. The LEDs emit visible light, which can be captured by the RGB camera, and generate enough heat signature to be detected by the thermal camera.
+
+Unlike traditional camera calibration techniques that rely on corner features or checkerboard patterns, LEDs do not produce high-contrast geometric features. To enhance marker localization, we proposed a Gaussian-based light and temperature distribution model for precise center estimation of each LED in both modalities.
+
+This approach enables accurate spatial alignment between RGB and thermal images, laying the groundwork for more advanced multi-sensor detection systems in autonomous driving.
+                        </p>
+                        <!-- <p>
+                            This project is a prerequirement of themral rgb vehicle detection, we want to match the detected targets in 
+                            one camera and the other.
+                            In this project, the key to find a uniform marker that can be detected in both RGB camera and thermal camera.
+                            So I designed a LED calibration board, which the light of the LED can be extract from RGB camera, and the temperature 
+                            can be detected by the thermal camera. 
+                            As the detection of the marker is different from the traditional camera calibration methods, the lighting LED is not a 
+                            corner feature.In order to improve the detection accuracy, we proposed a Gaussian light and tempurature distribution model 
+                            for better marker center estimation. 
+                        </p> -->
                     </div><div class="tech-list">
-                        <span class="tech-item">Real-scale depth estimation</span>
-                        <span class="tech-item">Visual scene depth</span>
-                        <span class="tech-item">IMU</span>
-                        <span class="tech-item">Optical flow</span>
+                        <span class="tech-item">Thermal-RGB-IMU Camera Calibration</span>
+                        <span class="tech-item">Gaussian Marker Distribution Model</span>
+                        <span class="tech-item">LED Calibration Board</span>
+                        <span class="tech-item">Real-scale Calibration</span>
                     </div>
                 </div>
             </div>
