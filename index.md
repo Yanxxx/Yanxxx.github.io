@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Yan Li
+title: Homepage
 ---
 <section id="home" class="intro-carousel-container">
     {% include intro.html %}
@@ -40,5 +40,5 @@ title: Yan Li
       {{ project.title }}
     </a>
   </li> -->
-{% endfor %}
-</ul>
+<!-- {% endfor %}
+</ul> -->
