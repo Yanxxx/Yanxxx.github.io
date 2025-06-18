@@ -1,0 +1,17 @@
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+                        <p>
+                            This project serves as a foundational step for thermal-RGB vehicle detection, focusing on the cross-modality target association between RGB and thermal cameras. The goal is to accurately match detected objects across both sensing modalities, a critical requirement for robust sensor fusion.
+
+The central challenge lies in identifying a common calibration marker that is reliably detectable in both RGB and thermal imagery. To address this, I designed a custom LED-based calibration board. The LEDs emit visible light, which can be captured by the RGB camera, and generate enough heat signature to be detected by the thermal camera.
+
+Unlike traditional camera calibration techniques that rely on corner features or checkerboard patterns, LEDs do not produce high-contrast geometric features. To enhance marker localization, we proposed a Gaussian-based light and temperature distribution model for precise center estimation of each LED in both modalities.
+
+This approach enables accurate spatial alignment between RGB and thermal images, laying the groundwork for more advanced multi-sensor detection systems in autonomous driving.
+                        </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/thermal-rgb-calibration/display-all.png" alt="Thermal-RGB calibration" loading="lazy">
+    </div>
+</div>

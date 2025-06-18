@@ -1,0 +1,16 @@
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+        
+            <p>
+                This project extends the previous lane detection work by improving the efficiency of lane instance association. The original approach relied on explicit computation of a pixel-level correlation matrix, which proved computationally expensive and difficult to scale.
+
+To address this, we replaced the exact correlation computation with a fully convolutional neural network (CNN) module that learns to estimate the correlation matrix directly from image features. This data-driven approach significantly reduces computational cost while retaining the ability to distinguish individual lane instances.
+
+The predicted correlation matrix is then used to perform lane instance separation, allowing the system to robustly identify and track multiple lanes in real-time, even in complex road scenarios.
+            </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/panoptic-segmentation/display11.png" alt="Instance segmentation" loading="lazy">
+    </div>
+</div>

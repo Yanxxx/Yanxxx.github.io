@@ -1,14 +1,17 @@
 <h2>Few Shot Robot Task Learning</h2>
     <ul class="project-list">
-         <li class="project-item" data-project-id="ai-forestry">
+         <li class="project-item" data-project-id="robot">
             <div class="project-content">
-                <img src="assets/images/Few-shot-Robot-Task-Learning/display2.gif" alt="segmentation">
+                <img src="assets/images/Few-shot-Robot-Task-Learning/display2.gif" alt="Robot trainning">
                 <div class="project-details">
                     <div class="project-title">
                         <h3>
                              EasyTeaching: A Keyframe-Driven Framework for Robotic Manipulation Learning
                         </h3>
                     </div>
+                    <p>
+                        Empower non-robotics experts to train robots for tasks within their own domains through intuitive interfaces and adaptable learning frameworks.
+                    </p>
                     <!-- <p>
                         This is my PhD defense project, The motivation was set to let NON-EXPERT to teach robot learning new task skills. 
                         the problems are the limited task demonstrations, unstructured environment, and no expert goal state setup.
@@ -16,20 +19,6 @@
                         task execution episodes, a heirarchical reinforcement learning method for trajectory planning and robot movement action 
                         generation, and a latent space exploration network for reduce the state searching space in image data. 
                     </p> -->
-                    <p>
-                        This is my Ph.D. defense project, motivated by the goal of enabling non-experts to teach robots new task skills. 
-                        The main challenges addressed include limited task demonstrations, unstructured environments,
-                         and the absence of expert-defined goal states.
-                    </p>
-                    <p>
-                        To tackle these issues, I developed:
-                        <ul>
-                            <li>A task demonstration evaluation method to refine human demonstrations and robot-collected execution episodes.</li>
-                            <li>A hierarchical reinforcement learning framework for trajectory planning and action generation.</li>
-                            <li>A latent space exploration network to reduce the high-dimensional image state space and accelerate policy learning.
-</li>
-                        </ul>
-                    </p>
                         <div class="tech-list">
                         <span class="tech-item">Latent Space (VAE) for RGBD Data</span>
                         <span class="tech-item">Robot Manipulation</span>
@@ -42,7 +31,7 @@
             </div>
         </li>
         <!-- Project 2 -->
-        <li class="project-item" data-project-id="ai-forestry">
+        <li class="project-item" data-project-id="digital-twin">
             <div class="project-content">
                 <img src="assets/images/Few-shot-Robot-Task-Learning/display1.gif" alt="Scene-depth">
                 <div class="project-details">
@@ -52,25 +41,9 @@
                         </h3>
                     </div>
                     <p>
-                        To support demonstration data collection, I developed a teleoperated digital twin system for a collaborative 
-                        robot (cobot), designed specifically for simulated excavator tasks. Due to hardware limitations, we utilized an 
-                        HTC VIVE controller as the primary input device to capture human motion signals. The system was built on ROS, 
-                        using the tracked controller pose as the control input.
-                    </p>
-                    <p> 
-                        To address the challenge of position revisiting—a common issue when using absolute position inputs—I implemented 
-                        a differential input model. The system only registers displacement when the controller trigger is pressed, 
-                        allowing for smoother and more intuitive control.
-                    </p>
-                    <p>    
-                        A significant challenge arose from kinematic singularities caused by joint constraints in the reduced-DoF 
-                        excavator model, particularly with the final two joints fixed at (0°, 90°). To overcome this, 
-                        I introduced a displacement repositioning strategy that mitigates singularities and ensures stable 
-                        teleoperation performance.
-                    </p>
-                    <p>
-                        This system greatly streamlines human demonstration collection for downstream learning algorithms in 
-                        robotic excavation tasks.
+                        Developed a VR-based teleoperated cobot digital twin for robotic manipulation demonstration and data collection. 
+                        The system also supports remote job demonstration and task tryouts, enabling intuitive human-robot interaction 
+                        and efficient acquisition of high-quality training data for learning-based controllers.
                     </p>
                     <div class="tech-list">
                         <span class="tech-item">Forward Kinematics</span>

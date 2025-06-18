@@ -31,6 +31,8 @@ title: Homepage
     {% include blind-navigation.html %}
 </section>
 
+{% include modal.html %}
+
 <!-- <h2>Projects</h2>
 <ul>
 {% for project in site.projects %}

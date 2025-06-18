@@ -1,6 +1,6 @@
 <h2>L2 Autonomous Driving</h2>
     <ul class="project-list">
-         <li class="project-item" data-project-id="ai-forestry">
+         <li class="project-item" data-project-id="segmentation">
             <div class="project-content">
                 <img src="assets/images/panoptic-segmentation/display.png" alt="segmentation">
                 <div class="project-details">
@@ -10,11 +10,8 @@
                         </h3>
                     </div>
                     <p>
-                        This project extends the previous lane detection work by improving the efficiency of lane instance association. The original approach relied on explicit computation of a pixel-level correlation matrix, which proved computationally expensive and difficult to scale.
-
-To address this, we replaced the exact correlation computation with a fully convolutional neural network (CNN) module that learns to estimate the correlation matrix directly from image features. This data-driven approach significantly reduces computational cost while retaining the ability to distinguish individual lane instances.
-
-The predicted correlation matrix is then used to perform lane instance separation, allowing the system to robustly identify and track multiple lanes in real-time, even in complex road scenarios.
+                        Proposed using a CNN to directly generate the relationship matrix, 
+                        replacing explicit computation to significantly reduce computational overhead.
                     </p>
                     <!-- <p>
                         This project was a continued work based on the lane detection project. The cooralationship matrix compustation is 
@@ -31,7 +28,7 @@ The predicted correlation matrix is then used to perform lane instance separatio
             </div>
         </li>
         <!-- Project 2 -->
-        <li class="project-item" data-project-id="ai-forestry">
+        <li class="project-item" data-project-id="lane">
             <div class="project-content">
                 <img src="assets/images/lane-detection/display.png" alt="Scene-depth">
                 <div class="project-details">
@@ -41,13 +38,8 @@ The predicted correlation matrix is then used to perform lane instance separatio
                         </h3>
                     </div>
                     <p>
-                        This project was motivated by the challenge of multi-lane detection in the absence of high-definition maps, particularly in complex or unstructured road environments.
-
-To address this, I proposed a pixel-level lane association framework by computing a pixel-to-pixel relational matrix that captures the structural continuity of individual lane markers. This approach enables the system to differentiate between adjacent lane boundaries and maintain consistent lane identities across frames.
-
-To improve efficiency, a lane marker filtering module was introduced to eliminate irrelevant pixels early in the pipeline, significantly reducing computational overhead while maintaining detection accuracy.
-
-This method supports lane-level localization using only onboard perception, making it especially suitable for real-time autonomous driving applications in environments where HD maps are unavailable or unreliable.
+                        Proposed an explicit relationship matrix following CNN-based feature extraction to distinguish individual lane instances. 
+                        The method was deployed on in-vehicle driver-assistance systems for enhanced lane recognition.
                     </p>
                     <!-- <p>
                         This project motivated by solving the mutliple lane numbers lane detection problem.
@@ -65,7 +57,7 @@ This method supports lane-level localization using only onboard perception, maki
             </div>
         </li>
         <!-- Project 3 -->
-         <li class="project-item" data-project-id="ai-forestry">
+         <li class="project-item" data-project-id="detection">
             <div class="project-content">
                 <img src="assets/images/vehicle-detection//display.png" alt="relative-motion">
                 <div class="project-details">
@@ -74,19 +66,8 @@ This method supports lane-level localization using only onboard perception, maki
                              Robust Thermal-RGB vehicle detection
                         </h3>
                         <p>
-                            This project was motivated by the challenges of vehicle perception under severe lighting conditions—a critical safety concern in real-world driving scenarios such as driving directly into sunlight at dawn or dusk, navigating rainy nights with inconsistent street lighting, or operating in low-light environments.
-
-To address these issues, we developed a complementary detection system that fuses data from an RGB camera and a far-infrared thermal camera. These two sensing modalities are highly complementary: the RGB camera excels under good lighting, while the thermal camera provides consistent object detection in low-visibility or high-glare situations.
-
-Our approach effectively covers a wide range of conditions:
-
-Overexposed environments where visible light is too intense,
-
-Underexposed or nighttime scenes where RGB performance drops,
-
-Thermal-uniform environments, such as sheltered or foggy areas where background and vehicle temperatures converge.
-
-By jointly processing RGB and thermal data, the system significantly improves vehicle detection robustness across diverse and adverse lighting conditions, enhancing safety and reliability for autonomous and assisted driving.
+                            Developed a vehicle detection system using complementary RGB and thermal cameras to ensure 
+                            robust performance under challenging lighting conditions.
                         </p>
                         <!-- <p>
                             This project motivated by the vehicle driving under servere lighting condition environment.
@@ -110,7 +91,7 @@ By jointly processing RGB and thermal data, the system significantly improves ve
             </div>
         </li>
         <!-- Project 4 -->
-         <li class="project-item" data-project-id="ai-forestry">
+         <li class="project-item" data-project-id="thermal-calibration">
             <div class="project-content">
                 <img src="assets/images/thermal-rgb-calibration/display.png" alt="calibration">
                 <div class="project-details">
@@ -119,13 +100,8 @@ By jointly processing RGB and thermal data, the system significantly improves ve
                             Spatial calibration for thermal-rgb cameras and inertial sensor system 
                         </h3>
                         <p>
-                            This project serves as a foundational step for thermal-RGB vehicle detection, focusing on the cross-modality target association between RGB and thermal cameras. The goal is to accurately match detected objects across both sensing modalities, a critical requirement for robust sensor fusion.
-
-The central challenge lies in identifying a common calibration marker that is reliably detectable in both RGB and thermal imagery. To address this, I designed a custom LED-based calibration board. The LEDs emit visible light, which can be captured by the RGB camera, and generate enough heat signature to be detected by the thermal camera.
-
-Unlike traditional camera calibration techniques that rely on corner features or checkerboard patterns, LEDs do not produce high-contrast geometric features. To enhance marker localization, we proposed a Gaussian-based light and temperature distribution model for precise center estimation of each LED in both modalities.
-
-This approach enables accurate spatial alignment between RGB and thermal images, laying the groundwork for more advanced multi-sensor detection systems in autonomous driving.
+                            Proposed an LED-based thermal camera calibration board and a novel sub-pixel precision 
+                            feature center localization method to improve thermal camera calibration accuracy.
                         </p>
                         <!-- <p>
                             This project is a prerequirement of themral rgb vehicle detection, we want to match the detected targets in 

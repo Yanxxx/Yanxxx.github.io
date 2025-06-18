@@ -1,0 +1,30 @@
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+            <p>
+                To support demonstration data collection, I developed a teleoperated digital twin system for a collaborative 
+                robot (cobot), designed specifically for simulated excavator tasks. Due to hardware limitations, we utilized an 
+                HTC VIVE controller as the primary input device to capture human motion signals. The system was built on ROS, 
+                using the tracked controller pose as the control input.
+            </p>
+            <p> 
+                To address the challenge of position revisiting—a common issue when using absolute position inputs—I implemented 
+                a differential input model. The system only registers displacement when the controller trigger is pressed, 
+                allowing for smoother and more intuitive control.
+            </p>
+            <p>    
+                A significant challenge arose from kinematic singularities caused by joint constraints in the reduced-DoF 
+                excavator model, particularly with the final two joints fixed at (0°, 90°). To overcome this, 
+                I introduced a displacement repositioning strategy that mitigates singularities and ensures stable 
+                teleoperation performance.
+            </p>
+            <p>
+                This system greatly streamlines human demonstration collection for downstream learning algorithms in 
+                robotic excavation tasks.
+            </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/Few-shot-Robot-Task-Learning/data-stream.gif" alt="data stream" loading="lazy">
+        <img src="assets/images/Few-shot-Robot-Task-Learning/digital-twin-system.png" alt="digital twin system" loading="lazy">
+    </div>
+</div>

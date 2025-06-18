@@ -1,0 +1,37 @@
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+            <p>
+                This paper proposes a method to measure the motion of a moving rigid body using a hybrid visual–inertial sensor. The rotational velocity of the moving object is computed from visual optical flow by solving a depthindependent bilinear constraint, and the translational velocity of the moving object is estimated by solving a dynamics constraint that reveals the relation between scene depth and translational motion. By fusing an inertial sensor, the scale of translational velocities can be estimated, which is otherwise unrecoverable from monocular visual optical flow. An iterative refinement scheme is introduced to deal with observation noise and outliers, and the extended Kalman filter is applied for motion tracking. The performance of the proposed method is evaluated by simulation studies and practical experiments, and the results show the effectiveness of the proposed method in terms of accuracy and robustness.
+            </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/ego-motion/display-all.png" alt="Ego motion tracking" loading="lazy">
+    </div>
+</div>
+<!-- 
+The core of the system is a filter-based or optimization-based VIO framework. This framework simultaneously estimates the sensor's 6-DOF pose (position and orientation), velocity, and IMU biases by fusing information from a camera and an Inertial Measurement Unit (IMU).
+
+The key innovation is an explicit "Inertial-Based Sanity Check" module that continuously validates the visual-only motion estimates against the inertial measurements. This is particularly crucial in environments where visual features are sparse or unreliable, leading to erroneous visual odometry.
+
+The Inertial-Based Sanity Check Module
+This module operates as a decision-making layer within the VIO pipeline. Its primary function is to determine the reliability of the visual data before it's fused with the inertial data. Here's how it would work:
+
+Short-Term Motion Prediction: The IMU data is integrated over a very short time window to predict the relative motion (change in position and orientation) of the sensor. While IMU integration is prone to long-term drift, it is generally reliable for short-term, high-frequency motion prediction.
+
+Visual Motion Estimation: Concurrently, the visual odometry component estimates the relative motion between consecutive camera frames by tracking the few available features.
+
+Consistency Verification: The "sanity check" module compares the motion estimates from both sources. A statistical test, such as the Mahalanobis distance, is used to quantify the difference between the visual estimate and the inertial prediction, taking into account the uncertainties of both.
+
+Adaptive Fusion Strategy:
+
+Consistent Data: If the visual and inertial estimates are consistent (the difference is below a predefined threshold), the visual data is considered reliable and is fused with the inertial data in the main VIO estimator. This allows the system to correct the inherent drift of the IMU.
+Inconsistent Data: If the estimates are inconsistent, this signifies a high probability of erroneous visual tracking due to feature scarcity or ambiguity. In this scenario, the system will:
+Reject Outliers: Discard the current visual measurements as outliers.
+Graceful Degradation: Temporarily rely more heavily on the IMU for state propagation. This prevents the erroneous visual data from corrupting the overall state estimate. The system essentially enters a "dead reckoning" mode for a short period, using the last known good state and the current IMU readings.
+Feature Search and Re-initialization: The system can trigger a more aggressive feature search or use alternative feature types (e.g., lines, planes) to re-establish a reliable visual track.
+Advantages of this Approach
+Robustness in Challenging Environments: This method would prevent catastrophic failures of the tracking system when encountering environments with few or no distinct visual features, such as long corridors, white walls, or open spaces with repetitive textures.
+Improved Accuracy: By filtering out unreliable visual updates, the overall accuracy of the state estimation is improved, as the estimator is not "pulled off course" by incorrect data.
+Graceful Performance Degradation: Instead of failing completely, the system's performance degrades gracefully, maintaining a reasonable estimate of the motion based on inertial data until a reliable visual track can be re-established.
+In essence, the proposed "visual estimation sanity check" formalizes the process of using high-frequency inertial data to validate low-frequency but drift-correcting visual updates, thereby creating a more resilient and reliable visual-inertial tracking system for real-world applications where ideal environmental conditions cannot be guaranteed -->

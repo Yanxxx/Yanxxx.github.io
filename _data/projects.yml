@@ -1,0 +1,197 @@
+humanoid-sim:
+  title: "Humanoid Robot Locomotion Simulation"
+  technology:
+    - "Reinforcement Learning"
+    - "Gait"
+    - "Humanoid Locomotion"
+    - "SAC"
+    - "PPO"
+    - "Reward Shaping"
+    - "Mujoco"
+  external_links:
+    - text: ""
+      url: ""
+
+
+humanoid:
+  title: "3D Printed Humanoid Robot Project"
+  technology:
+    - "Axial flux BLDC motor"
+    - "Carbon fiber bone"
+    - "Reinforcment Learning" 
+    - "Gait Algorithm"
+  external_links:
+    - text: ""
+      url: ""
+
+ai-forestry:
+  title: "AI-Driven Insights for Precision Forest Health and Resource Assessment"
+  technology:
+    - "Vision-Language Model"
+    - "precision Plant Stock Inventory"
+    - "Autonomous Data Collection"
+    - "Image segmentation"
+  external_links:
+    - text: ""
+      url: ""
+
+drone:
+  title: "AI forestry automation"
+  technology:
+    - "Drone desgin and manufacture"
+    - "Reinforcment Learning for Patrol Plan"
+    - "Vision based flight control"
+    - "LLM powered task schedule"
+  external_links:
+    - text: ""
+      url: ""
+
+quadruped:
+  title: "Assistance Robot for Dementia Care"
+  technology:
+    - "Quadruped Robot"
+    - "Target tracking"
+    - "CLIP"
+    - "Target sourcing"
+  external_links:
+    - text: ""
+      url: ""
+
+laser:
+  title: "Augmented Reality powered construction feild Lofting tool"
+  technology:
+    - "Prototyping"
+    - "Vision based projection"
+    - "Laser graph ILD generation"
+    - "Augmented Reality"
+  external_links:
+    - text: ""
+      url: ""
+
+robot:
+  title: "Keyframe-Driven Framework for Robotic Manipulation Learning"
+  technology:
+    - "Few Shot Robot Task Learning"
+    - "GAIL"
+    - "Reinforcement Learning"
+    - "SAC"
+    # - "https://github.com/wengmister/Dex_Hand_MSR"
+  external_links:
+    - text: "Details"
+      url: "https://yanxxx.github.io/EasyTeaching/"
+    - text: "paper"
+      url: "https://github.com/Yanxxx/EasyTeaching/blob/main/manuscript.pdf"
+
+digital-twin:
+  title: "Teleoperated Colabration Robot Digital Twin"
+  technology:
+    - "ROS2"
+    - "Computer Vision"
+    - "RGB-D Sensor"
+    - "HTC VIVE"
+    - "Virtual Reality"
+    - "Kinematic control"
+    - "Forward Kinematics and Inverse Kinematics"
+    - "C++"
+    - "Python"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/Apex-Putter"
+
+segmentation:
+  title: "Instance segmentation for vehicle automation"
+  technology:
+    - "Instance Segmentation"
+    - "Pixel Level Relatship Matrix"
+    - "Parallel Computing"
+    - ""
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/msr_PincherX"
+
+lane:
+  title: "Distinguish detected lane markers into sepearate lanes"
+  technology:
+    - "Lane Marker Classification"
+    - "CNN"
+    - "Deep Learning"
+    - "MLP"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/me449/tree/main/final_project"
+
+detection:
+  title: "Robust Thermal-RGB vehicle detection"
+  technology:
+    - "Deep Learning"
+    - "Thermal Camera"
+    - "Complementary Detection"
+    - "Sensor Fusion"
+  external_links:
+    - text: "Project Repo"
+      url: "https://github.com/msr-in-msai/msai-349-final-project"
+
+thermal-calibration:
+  title: "Spatial calibration for thermal-rgb cameras and inertial sensor system"
+  technology:
+    - "Thermal-RGB Cameras"
+    - "IMU"
+    - "Sensor Calibration"
+    - "Sensor Fusion"
+  external_links:
+    # - text: "Project Repo - VR"
+    #   url: "https://github.com/wengmister/franka-vr-teleop"
+    # - text: "Project Repo - Controller"
+    #   url: "https://github.com/wengmister/franka_joystick_teleop"
+
+ego-motion:
+  title: "Wearable ego-motion tracking for blind navigation in indoor environments"
+  technology:
+    - "Robust Tracking"
+    - "VIO"
+    - "IMU"
+    - "Augmented Reality"
+    - "Google Glasses"
+    - "C++"
+    - "Sensor Fusion"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/midi2json" 
+
+depth:
+  title: "Real-scale dense scene depth estimation based on visual-inertial measurements"
+  technology:
+    - "Visual Depth Estimation"
+    - "Real-scale"
+    - "IMU"
+    - "Optical Flow"
+    - "C++"
+    - "Sensor Fusion"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/midi2json" 
+
+
+relative-motion:
+  title: "Relative motion estimation using visual–inertial optical flow"
+  technology:
+    - "Optical Flow"
+    - "Real-scale"
+    - "IMU"
+    - "Relative Speed Estimation"
+    - "Sensor Fusion"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/midi2json" 
+
+
+rotation-calibration:
+  title: "Rotational coordinate transformation for visual-inertial sensor fusion"
+  technology:
+    - "Rotation Calibration"
+    - "Quaternion"
+    - "RGB-IMU Calibration"
+    - "Sensor Fusion"
+  external_links:
+    # - text: "Project Repo"
+    #   url: "https://github.com/wengmister/midi2json" 
