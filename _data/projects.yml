@@ -9,8 +9,8 @@ humanoid-sim:
     - "Reward Shaping"
     - "Mujoco"
   external_links:
-    - text: ""
-      url: ""
+    - text: "Simulation"
+      url: "https://github.com/Yanxxx/humanoid-locomotion"
 
 
 humanoid:
