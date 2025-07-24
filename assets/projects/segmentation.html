@@ -14,3 +14,63 @@ The predicted correlation matrix is then used to perform lane instance separatio
         <img src="assets/images/panoptic-segmentation/display11.png" alt="Instance segmentation" loading="lazy">
     </div>
 </div>
+
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+            <p>
+                This project was motivated by the challenges of vehicle perception under severe lighting conditions—a critical safety concern in real-world driving scenarios such as driving directly into sunlight at dawn or dusk, navigating rainy nights with inconsistent street lighting, or operating in low-light environments.
+
+To address these issues, we developed a complementary detection system that fuses data from an RGB camera and a far-infrared thermal camera. These two sensing modalities are highly complementary: the RGB camera excels under good lighting, while the thermal camera provides consistent object detection in low-visibility or high-glare situations.
+
+Our approach effectively covers a wide range of conditions:
+
+Overexposed environments where visible light is too intense,
+
+Underexposed or nighttime scenes where RGB performance drops,
+
+Thermal-uniform environments, such as sheltered or foggy areas where background and vehicle temperatures converge.
+
+By jointly processing RGB and thermal data, the system significantly improves vehicle detection robustness across diverse and adverse lighting conditions, enhancing safety and reliability for autonomous and assisted driving.
+            </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/vehicle-detection/display-all.png" alt="Vehicle detection" loading="lazy">
+    </div>
+</div>
+
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>                   
+        <p>
+                        This project was motivated by the challenge of multi-lane detection in the absence of high-definition maps, particularly in complex or unstructured road environments.
+
+To address this, I proposed a pixel-level lane association framework by computing a pixel-to-pixel relational matrix that captures the structural continuity of individual lane markers. This approach enables the system to differentiate between adjacent lane boundaries and maintain consistent lane identities across frames.
+
+To improve efficiency, a lane marker filtering module was introduced to eliminate irrelevant pixels early in the pipeline, significantly reducing computational overhead while maintaining detection accuracy.
+
+This method supports lane-level localization using only onboard perception, making it especially suitable for real-time autonomous driving applications in environments where HD maps are unavailable or unreliable.
+        </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/lane-detection/display-full.png" alt="Lane detection" loading="lazy">
+    </div>
+</div>
+
+<div class="modal-section overview-section">
+    <div class="overview-text">
+        <h3 class="modal-section-title">Overview</h3>
+                        <p>
+                            This project serves as a foundational step for thermal-RGB vehicle detection, focusing on the cross-modality target association between RGB and thermal cameras. The goal is to accurately match detected objects across both sensing modalities, a critical requirement for robust sensor fusion.
+
+The central challenge lies in identifying a common calibration marker that is reliably detectable in both RGB and thermal imagery. To address this, I designed a custom LED-based calibration board. The LEDs emit visible light, which can be captured by the RGB camera, and generate enough heat signature to be detected by the thermal camera.
+
+Unlike traditional camera calibration techniques that rely on corner features or checkerboard patterns, LEDs do not produce high-contrast geometric features. To enhance marker localization, we proposed a Gaussian-based light and temperature distribution model for precise center estimation of each LED in both modalities.
+
+This approach enables accurate spatial alignment between RGB and thermal images, laying the groundwork for more advanced multi-sensor detection systems in autonomous driving.
+                        </p>
+   </div>
+    <div class="overview-image">
+        <img src="assets/images/thermal-rgb-calibration/display-all.png" alt="Thermal-RGB calibration" loading="lazy">
+    </div>
+</div>
