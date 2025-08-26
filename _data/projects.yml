@@ -1,5 +1,5 @@
 humanoid-sim:
-  title: "Humanoid Robot Locomotion Simulation"
+  title: "Humanoid Robot Locomotion Projects"
   technology:
     - "Reinforcement Learning"
     - "Gait"
@@ -9,8 +9,10 @@ humanoid-sim:
     - "Reward Shaping"
     - "Mujoco"
   external_links:
-    - text: "Simulation"
+    - text: "Mujuco - repo"
       url: "https://github.com/Yanxxx/humanoid-locomotion"
+    - text: "Issaclab - repo"
+      url: "https://github.com/Yanxxx/humanoid-guided-locomotion"
 
 
 humanoid:
@@ -75,6 +77,16 @@ robot:
     - "GAIL"
     - "Reinforcement Learning"
     - "SAC"
+    - "ROS2"
+    - "Computer Vision"
+    - "RGB-D Sensor"
+    - "HTC VIVE"
+    - "Virtual Reality"
+    - "Kinematic control"
+    - "Forward Kinematics and Inverse Kinematics"
+    - "C++"
+    - "Python"
+    
     # - "https://github.com/wengmister/Dex_Hand_MSR"
   external_links:
     - text: "Details"
@@ -99,12 +111,22 @@ digital-twin:
     #   url: "https://github.com/wengmister/Apex-Putter"
 
 segmentation:
-  title: "Instance segmentation for vehicle automation"
+  title: "L2 Autonomous Driving Projects"
   technology:
     - "Instance Segmentation"
     - "Pixel Level Relatship Matrix"
     - "Parallel Computing"
-    - ""
+    - "Lane Marker Classification"
+    - "CNN"
+    - "Deep Learning"
+    - "MLP"
+    - "Thermal Camera"
+    - "Complementary Detection"
+    - "Sensor Fusion"
+    - "Thermal-RGB Cameras"
+    - "IMU"
+    - "Sensor Calibration"
+
   external_links:
     # - text: "Project Repo"
     #   url: "https://github.com/wengmister/msr_PincherX"
@@ -145,7 +167,7 @@ thermal-calibration:
     #   url: "https://github.com/wengmister/franka_joystick_teleop"
 
 ego-motion:
-  title: "Wearable ego-motion tracking for blind navigation in indoor environments"
+  title: "Pedestrain Navigation for Visual Impaired Patients"
   technology:
     - "Robust Tracking"
     - "VIO"
